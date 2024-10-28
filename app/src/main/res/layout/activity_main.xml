@@ -1,6 +1,330 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="ExtraText">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="459dp"
+        android:layout_height="774dp"
+        app:srcCompat="@drawable/sunny_bg"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-8dp"
+        tools:layout_editor_absoluteY="-3dp" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/searchviewshape"
+        app:defaultQueryHint="search for a city"
+        app:iconifiedByDefault="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.055"
+        app:queryHint="Search..." />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.181"
+        app:srcCompat="@drawable/location2" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="167dp"
+        android:layout_height="148dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/sun" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="112dp"
+        android:layout_height="40dp"
+        android:text="Today"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lottieAnimationView"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00  °C"
+        android:textColor="#000000"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.103" />
+
+    <FrameLayout
+        android:layout_width="411dp"
+        android:layout_height="248dp"
+        android:background="@drawable/backgroundshape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.779">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="398dp"
+            android:layout_height="238dp"
+            android:layout_marginBottom="68dp">
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="80dp"
+                android:layout_height="88dp"
+                android:background="@drawable/backgroundshape"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="65dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="bottom|center"
+                    app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="00 %"
+                    android:textColor="#000000" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="Humidity"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="80dp"
+                android:layout_height="88dp"
+                android:background="@drawable/backgroundshape"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="65dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="0.00 m/s"
+                    android:textColor="#000000" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="Wind Speed"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="80dp"
+                android:layout_height="88dp"
+                android:background="@drawable/backgroundshape"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="65dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="SUNNY"
+                    android:textColor="#000000" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="Condition"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="80dp"
+                android:layout_height="88dp"
+                android:background="@drawable/backgroundshape"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="65dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="00:00"
+                    android:textColor="#000000" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="Sunrise"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout11"
+                android:layout_width="80dp"
+                android:layout_height="88dp"
+                android:background="@drawable/backgroundshape"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="65dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="00:00"
+                    android:textColor="#000000" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="Sunset"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout12"
+                android:layout_width="80dp"
+                android:layout_height="88dp"
+                android:background="@drawable/backgroundshape"
+                android:orientation="vertical">
+
+                <ImageView
+
+                    android:layout_width="65dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="0000 hPa"
+                    android:textColor="#000000" />
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:text="Sea"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow6"
+                android:layout_width="364dp"
+                android:layout_height="215dp"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="linearLayout7,linearLayout8,linearLayout9,linearLayout10,linearLayout11,linearLayout12"
+                app:flow_maxElementsWrap="3"
+                app:flow_wrapMode="chain"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="151dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="348dp"
+        android:text="28 October 2024"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
