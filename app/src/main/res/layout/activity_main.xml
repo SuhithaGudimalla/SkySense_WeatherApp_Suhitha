@@ -56,7 +56,7 @@
         app:lottie_rawRes="@raw/sun" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textViewToday"
         android:layout_width="112dp"
         android:layout_height="40dp"
         android:text="Today"
@@ -70,7 +70,7 @@
         app:layout_constraintVertical_bias="0.123" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textViewTemperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00:00  °C"
@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.174"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="@+id/textViewToday"
         app:layout_constraintVertical_bias="0.103" />
 
     <FrameLayout
@@ -102,7 +102,7 @@
             android:layout_marginBottom="68dp">
 
             <LinearLayout
-                android:id="@+id/linearLayout7"
+                android:id="@+id/linearLayoutHumidity"
                 android:layout_width="80dp"
                 android:layout_height="88dp"
                 android:background="@drawable/backgroundshape"
@@ -116,7 +116,7 @@
                     app:srcCompat="@drawable/ic_launcher_foreground" />
 
                 <TextView
-
+                    android:id="@+id/textViewHumidityValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -125,7 +125,7 @@
                     android:textColor="#000000" />
 
                 <TextView
-
+                    android:id="@+id/textViewHumidity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -135,7 +135,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout8"
+                android:id="@+id/linearLayoutWindSpeed"
                 android:layout_width="80dp"
                 android:layout_height="88dp"
                 android:background="@drawable/backgroundshape"
@@ -149,7 +149,7 @@
                     app:srcCompat="@drawable/ic_launcher_foreground" />
 
                 <TextView
-
+                    android:id="@+id/textViewWindSpeedValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -158,7 +158,7 @@
                     android:textColor="#000000" />
 
                 <TextView
-
+                    android:id="@+id/textViewWindSpeed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -168,7 +168,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout9"
+                android:id="@+id/linearLayoutCondition"
                 android:layout_width="80dp"
                 android:layout_height="88dp"
                 android:background="@drawable/backgroundshape"
@@ -182,7 +182,7 @@
                     app:srcCompat="@drawable/ic_launcher_foreground" />
 
                 <TextView
-
+                    android:id="@+id/textViewConditionValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -191,7 +191,7 @@
                     android:textColor="#000000" />
 
                 <TextView
-
+                    android:id="@+id/textViewCondition"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -201,7 +201,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout10"
+                android:id="@+id/linearLayoutSunrise"
                 android:layout_width="80dp"
                 android:layout_height="88dp"
                 android:background="@drawable/backgroundshape"
@@ -215,7 +215,7 @@
                     app:srcCompat="@drawable/ic_launcher_foreground" />
 
                 <TextView
-
+                    android:id="@+id/textViewSunriseValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -224,7 +224,7 @@
                     android:textColor="#000000" />
 
                 <TextView
-
+                    android:id="@+id/textViewSunrise"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -234,7 +234,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout11"
+                android:id="@+id/linearLayoutSunset"
                 android:layout_width="80dp"
                 android:layout_height="88dp"
                 android:background="@drawable/backgroundshape"
@@ -248,7 +248,7 @@
                     app:srcCompat="@drawable/ic_launcher_foreground" />
 
                 <TextView
-
+                    android:id="@+id/textViewSunsetValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -257,7 +257,7 @@
                     android:textColor="#000000" />
 
                 <TextView
-
+                    android:id="@+id/textViewSunset"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -267,7 +267,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/linearLayout12"
+                android:id="@+id/linearLayoutSea"
                 android:layout_width="80dp"
                 android:layout_height="88dp"
                 android:background="@drawable/backgroundshape"
@@ -281,7 +281,7 @@
                     app:srcCompat="@drawable/ic_launcher_foreground" />
 
                 <TextView
-
+                    android:id="@+id/textViewSeaValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -290,7 +290,7 @@
                     android:textColor="#000000" />
 
                 <TextView
-
+                    android:id="@+id/textViewSea"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
@@ -304,7 +304,7 @@
                 android:layout_width="364dp"
                 android:layout_height="215dp"
                 android:orientation="horizontal"
-                app:constraint_referenced_ids="linearLayout7,linearLayout8,linearLayout9,linearLayout10,linearLayout11,linearLayout12"
+                app:constraint_referenced_ids="linearLayoutHumidity,linearLayoutWindSpeed,linearLayoutCondition,linearLayoutSunrise,linearLayoutSunset,linearLayoutSea"
                 app:flow_maxElementsWrap="3"
                 app:flow_wrapMode="chain"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -315,7 +315,7 @@
     </FrameLayout>
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textViewDate"
         android:layout_width="151dp"
         android:layout_height="45dp"
         android:layout_marginTop="348dp"
