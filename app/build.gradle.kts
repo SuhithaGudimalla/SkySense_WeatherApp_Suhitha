@@ -41,4 +41,8 @@ dependencies {
 
     // Correct way to add Lottie dependency
     implementation("com.airbnb.android:lottie:6.1.0")  // Use quotes for string
+        implementation ("com.squareup.okhttp3:okhttp:4.9.3")
+        implementation ("org.json:json:20210307")
+
+
 }
