@@ -56,8 +56,8 @@
 
     <TextView
         android:id="@+id/textViewToday"
-        android:layout_width="112dp"
-        android:layout_height="40dp"
+        android:layout_width="91dp"
+        android:layout_height="39dp"
         android:text="Today"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -112,7 +112,7 @@
                     android:layout_width="65dp"
                     android:layout_height="27dp"
                     android:layout_gravity="bottom|center"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    app:srcCompat="@drawable/humidity" />
 
                 <TextView
                     android:id="@+id/textViewHumidityValue"
@@ -145,7 +145,7 @@
                     android:layout_width="65dp"
                     android:layout_height="27dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    app:srcCompat="@drawable/windspeed" />
 
                 <TextView
                     android:id="@+id/textViewWindSpeedValue"
@@ -178,7 +178,7 @@
                     android:layout_width="65dp"
                     android:layout_height="27dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    app:srcCompat="@drawable/conditions" />
 
                 <TextView
                     android:id="@+id/textViewConditionValue"
@@ -211,7 +211,7 @@
                     android:layout_width="65dp"
                     android:layout_height="27dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    app:srcCompat="@drawable/sunrise" />
 
                 <TextView
                     android:id="@+id/textViewSunriseValue"
@@ -241,10 +241,10 @@
 
                 <ImageView
 
-                    android:layout_width="65dp"
-                    android:layout_height="27dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    app:srcCompat="@drawable/sunset" />
 
                 <TextView
                     android:id="@+id/textViewSunsetValue"
@@ -274,10 +274,10 @@
 
                 <ImageView
 
-                    android:layout_width="65dp"
-                    android:layout_height="27dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    app:srcCompat="@drawable/sea" />
 
                 <TextView
                     android:id="@+id/textViewSeaValue"
@@ -315,14 +315,14 @@
 
     <TextView
         android:id="@+id/textViewDate"
-        android:layout_width="151dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="348dp"
+        android:layout_width="316dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="344dp"
         android:text="28 October 2024"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintHorizontal_bias="0.273"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
