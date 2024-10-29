@@ -20,15 +20,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="@drawable/searchviewshape"
-        app:defaultQueryHint="search for a city"
+
         app:iconifiedByDefault="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.055"
-        app:queryHint="Search..." />
+        app:queryHint="Search for a city" />
 
     <ImageView
         android:id="@+id/imageView2"
