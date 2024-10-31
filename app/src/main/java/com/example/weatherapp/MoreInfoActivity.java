@@ -21,12 +21,18 @@ public class MoreInfoActivity extends AppCompatActivity {
     private RecyclerView recyclerViewHourly;
     private HourlyAdapter hourlyAdapter;
     private static final String API_KEY = "ef7ef39d55d84036b38103107243110"; // Your API key
-    private static final String LOCATION = "Hyderabad"; // Your location
+    private String cityName; // Variable to hold the city name
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.more_info);
+
+        // Get the city name passed from MainActivity
+        cityName = getIntent().getStringExtra("CITY_NAME");
+        if (cityName == null || cityName.isEmpty()) {
+            cityName = "Hyderabad"; // Default location if no city is provided
+        }
 
         recyclerViewHourly = findViewById(R.id.recyclerViewHourly);
         recyclerViewHourly.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -41,19 +47,19 @@ public class MoreInfoActivity extends AppCompatActivity {
                 .build();
 
         ApiInterfaceHourly apiInterfaceHourly = retrofit.create(ApiInterfaceHourly.class);
-        Call<HourlyResponse> call = apiInterfaceHourly.getHourlyWeather(API_KEY, LOCATION, 1, 24);
+        Call<HourlyResponse> call = apiInterfaceHourly.getHourlyWeather(API_KEY, cityName, 1, 24); // Use cityName here
 
         call.enqueue(new Callback<HourlyResponse>() {
             @Override
             public void onResponse(Call<HourlyResponse> call, Response<HourlyResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    Log.d("API Response", response.body().toString()); // Log the response for debugging
+                    Log.d("API Response", response.body().toString());
                     List<HourlyData> hourlyDataList = new ArrayList<>();
                     for (HourlyResponse.ForecastDay forecastDay : response.body().getForecast().getForecastday()) {
-                        if (forecastDay.getHour() != null) { // Check if hour list is not null
+                        if (forecastDay.getHour() != null) {
                             for (HourlyResponse.Hour hour : forecastDay.getHour()) {
                                 String time = hour.getTime();
-                                String temperature = String.valueOf(hour.getTempC()); // Corrected line
+                                String temperature = String.valueOf(hour.getTempC());
                                 hourlyDataList.add(new HourlyData(time, temperature));
                             }
                         }

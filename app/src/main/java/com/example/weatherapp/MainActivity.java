@@ -1,16 +1,18 @@
 package com.example.weatherapp;
 
 import android.annotation.SuppressLint;
-import android.content.Intent; // Import Intent
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button; // Import Button
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+
 import com.airbnb.lottie.LottieAnimationView;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -58,7 +60,9 @@ public class MainActivity extends AppCompatActivity {
         // Button to navigate to MoreInfoActivity
         Button buttonMoreInfo = findViewById(R.id.button);
         buttonMoreInfo.setOnClickListener(v -> {
+            String cityName = searchView.getQuery().toString();
             Intent intent = new Intent(MainActivity.this, MoreInfoActivity.class);
+            intent.putExtra("CITY_NAME", cityName); // Pass the city name
             startActivity(intent);
         });
     }
