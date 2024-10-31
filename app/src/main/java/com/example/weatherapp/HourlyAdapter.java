@@ -33,7 +33,7 @@ public class HourlyAdapter extends RecyclerView.Adapter<HourlyAdapter.HourlyView
         // Set the appropriate icon based on the weather condition
         switch (data.getCondition().toLowerCase()) {
             case "clear":
-                holder.imageView.setImageResource(R.drawable.sunny); // Replace with your drawable
+                holder.imageView.setImageResource(R.drawable.sun_cloud); // Replace with your drawable
                 break;
             case "cloudy":
                 holder.imageView.setImageResource(R.drawable.white_cloud); // Replace with your drawable
@@ -45,7 +45,7 @@ public class HourlyAdapter extends RecyclerView.Adapter<HourlyAdapter.HourlyView
                 holder.imageView.setImageResource(R.drawable.snow); // Replace with your drawable
                 break;
             default:
-                holder.imageView.setImageResource(R.drawable.sunny); // Default image
+                holder.imageView.setImageResource(R.drawable.sun_cloud); // Default image
                 break;
         }
     }
