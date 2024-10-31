@@ -8,12 +8,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="438dp"
-        android:layout_height="772dp"
+        android:layout_width="423dp"
+        android:layout_height="801dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/sunny_bg"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="-3dp" />
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
@@ -83,6 +85,7 @@
         app:layout_constraintVertical_bias="0.103" />
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="376dp"
         android:layout_height="221dp"
         android:background="@drawable/backgroundshape"
@@ -325,5 +328,15 @@
         app:layout_constraintHorizontal_bias="0.273"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="32dp"
+        android:text="More info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

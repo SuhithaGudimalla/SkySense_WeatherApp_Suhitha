@@ -28,6 +28,9 @@
         <!-- Main Activity Declaration -->
         <activity android:name=".MainActivity"
             tools:ignore="MissingClass" />
+        <!-- More Info Activity Declaration -->
+        <activity android:name=".MoreInfoActivity"
+            android:exported="true" />  <!-- Ensure this is declared as well -->
 
     </application>
 
