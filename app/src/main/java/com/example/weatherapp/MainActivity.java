@@ -61,9 +61,13 @@ public class MainActivity extends AppCompatActivity {
         Button buttonMoreInfo = findViewById(R.id.button);
         buttonMoreInfo.setOnClickListener(v -> {
             String cityName = searchView.getQuery().toString();
-            Intent intent = new Intent(MainActivity.this, MoreInfoActivity.class);
-            intent.putExtra("CITY_NAME", cityName); // Pass the city name
-            startActivity(intent);
+            if (!cityName.isEmpty()) {
+                Intent intent = new Intent(MainActivity.this, MoreInfoActivity.class);
+                intent.putExtra("CITY_NAME", cityName); // Pass the city name
+                startActivity(intent);
+            } else {
+                Toast.makeText(MainActivity.this, "Please enter a city name.", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 

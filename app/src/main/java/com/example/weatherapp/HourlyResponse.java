@@ -27,7 +27,8 @@ public class HourlyResponse {
 
     public class Hour {
         private String time;
-        private double temp_c; // Or change this based on the API response
+        private double temp_c; // Temperature in Celsius
+        private Condition condition; // Add this line for the condition
 
         public String getTime() {
             return time;
@@ -35,6 +36,24 @@ public class HourlyResponse {
 
         public double getTempC() {
             return temp_c;
+        }
+
+        public Condition getCondition() { // Add this method to get the condition
+            return condition;
+        }
+    }
+
+    // Define the Condition class to hold condition-related data
+    public class Condition {
+        private String text; // The textual representation of the weather condition
+        private String icon; // Optional: URL for the condition icon
+
+        public String getText() {
+            return text;
+        }
+
+        public String getIcon() {
+            return icon; // Optional: method to get icon URL
         }
     }
 }

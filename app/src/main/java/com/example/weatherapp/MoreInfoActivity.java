@@ -42,25 +42,30 @@ public class MoreInfoActivity extends AppCompatActivity {
 
     private void fetchHourlyWeather() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://api.weatherapi.com/v1/")
+                .baseUrl("https://api.weatherapi.com/v1/") // Ensure this matches the actual API endpoint
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         ApiInterfaceHourly apiInterfaceHourly = retrofit.create(ApiInterfaceHourly.class);
-        Call<HourlyResponse> call = apiInterfaceHourly.getHourlyWeather(API_KEY, cityName, 1, 24); // Use cityName here
+
+        // Use cityName instead of location
+        Call<HourlyResponse> call = apiInterfaceHourly.getHourlyWeather(API_KEY, cityName, 1, 24);
 
         call.enqueue(new Callback<HourlyResponse>() {
             @Override
             public void onResponse(Call<HourlyResponse> call, Response<HourlyResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    Log.d("API Response", response.body().toString());
+                    Log.d("API Response", response.body().toString()); // Log the response for debugging
                     List<HourlyData> hourlyDataList = new ArrayList<>();
                     for (HourlyResponse.ForecastDay forecastDay : response.body().getForecast().getForecastday()) {
-                        if (forecastDay.getHour() != null) {
+                        if (forecastDay.getHour() != null) { // Check if hour list is not null
                             for (HourlyResponse.Hour hour : forecastDay.getHour()) {
                                 String time = hour.getTime();
                                 String temperature = String.valueOf(hour.getTempC());
-                                hourlyDataList.add(new HourlyData(time, temperature));
+                                String condition = hour.getCondition().getText(); // Get the condition text
+
+                                // Pass condition here
+                                hourlyDataList.add(new HourlyData(time, temperature, condition));
                             }
                         }
                     }
